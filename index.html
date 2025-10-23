@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <img src="pics/logo.png" alt="UltraVoice Logo" class="logo">
+            </div>
+            <h1 class="title">UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations for Spoken Dialogue Models</h1>
+            <div class="repo-links">
+                <a href="#" class="repo-link">
+                    <i class="fas fa-file-pdf"></i> arXiv
+                </a>
+                <a href="https://github.com/bigai-nlco/UltraVoice" target="_blank" class="repo-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://huggingface.co/datasets/tutu0604/UltraVoice" target="_blank" class="repo-link">
+                    <i class="fas fa-database"></i> Dataset
+                </a>
+                <a href="https://huggingface.co/tutu0604/UltraVoice-SFT" target="_blank" class="repo-link">
+                    <i class="fas fa-code-branch"></i> Checkpoints
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Abstract -->
+            <section class="abstract-section">
+                <h2 class="section-title"><i class="fas fa-book"></i> Abstract</h2>
+                <div class="abstract-content">
+                    <p>
+                        Spoken dialogue models currently lack the ability for fine-grained speech style control, a critical capability for human-like interaction that is often overlooked in favor of purely functional capabilities like reasoning and question answering. To address this limitation, we introduce <strong>UltraVoice</strong>, the first large-scale speech dialogue dataset engineered for multiple fine-grained speech style control. Encompassing over <strong class="highlight-result">830 hours</strong> of speech dialogues, UltraVoice provides instructions across six key speech stylistic dimensions: emotion, speed, volume, accent, language, and composite styles. 
+                    </p>
+                    <p>
+                        Fine-tuning leading models such as SLAM-Omni and VocalNet on UltraVoice significantly enhances their fine-grained speech stylistic controllability without degrading core conversational abilities. Specifically, our fine-tuned models achieve improvements of <strong class="highlight-result">29.12-42.33%</strong> in Mean Opinion Score (MOS) and <strong class="highlight-result">14.61-40.09</strong> percentage points in Instruction Following Rate (IFR) on multi-dimensional control tasks designed in the UltraVoice. Moreover, on the URO-Bench benchmark, our fine-tuned models demonstrate substantial gains in core understanding, reasoning, and conversational abilities, with average improvements of <strong class="highlight-result">+10.84%</strong> on the Basic setting and <strong class="highlight-result">+7.87%</strong> on the Pro setting. Furthermore, the dataset's utility extends to training controllable Text-to-Speech (TTS) models, underscoring its high quality and broad applicability for expressive speech synthesis.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Dataset Overview -->
+            <section class="overview-section">
+                <h2 class="section-title"><i class="fas fa-chart-pie"></i> Dataset Overview</h2>
+                <div class="teaser-section" style="--teaser-max-width: 900px;">
+                    <figure class="teaser-figure">
+                        <img src="pics/teasor.png" alt="UltraVoice Teaser" class="teaser-image">
+                        <figcaption class="teaser-caption">
+                            <strong>Overview of the UltraVoice Dataset Construction and Stylistic Coverage.</strong>
+                            The upper left section details the four-step process: text corpus curation, style injection &amp; response generation, stylized speech synthesis, and quality control &amp; filtering. The ring chart on the right visualizes the dataset’s control dimensions (inner ring) and their finer control sub-dimensions (outer ring). The lower panel provides examples of six speech style dimensions, including emotion, speed, volume, language, accent, and composite styles (e.g., combinations of speed, volume, and emotion).
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        <div class="stat-value">830+</div>
+                        <div class="stat-label">Hours of Speech</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-sliders-h"></i></div>
+                        <div class="stat-value">6</div>
+                        <div class="stat-label">Style Dimensions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="stat-value">23</div>
+                        <div class="stat-label">Sub-dimensions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-comments"></i></div>
+                        <div class="stat-value">100K+</div>
+                        <div class="stat-label">Dialogues</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Style Dimensions -->
+            <section class="dimensions-section">
+                <h2 class="section-title"><i class="fas fa-microphone-alt"></i> Fine-Grained Style Control Dimensions</h2>
+                <p class="section-description">
+                    Explore our dataset's comprehensive coverage of speech style dimensions. Each dimension contains multiple sub-types with instruction-response pairs demonstrating fine-grained control.
+                </p>
+                
+                <div id="dimensions-container" class="dimensions-container">
+                    <!-- Dimensions will be dynamically loaded here -->
+                </div>
+            </section>
+
+            <!-- Model Comparison -->
+            <section class="comparison-section">
+                <h2 class="section-title"><i class="fas fa-balance-scale"></i> Base Model vs. SFT Model Comparison</h2>
+                <p class="section-description">
+                    Compare the performance of the base model and the fine-tuned model on various style control tasks. The table below shows representative samples across different control dimensions.
+                </p>
+                
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Control Dimension</th>
+                                <th>Sub-Dimension</th>
+                                <th>Audio Query</th>
+                                <th>Base Model</th>
+                                <th>SFT Model</th>
+                            </tr>
+                        </thead>
+                        <tbody id="comparison-tbody">
+                            <!-- Comparison data will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 UltraVoice. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Load embedded datasets first, then main scripts -->
+    <script src="src/data-embedded.js"></script>
+    <script src="src/comparison-data-embedded.js"></script>
+    <script src="src/data.js"></script>
+    <script src="src/main.js"></script>
+    <script src="src/comparison-data.js"></script>
+</body>
+</html>
+
