@@ -4,7 +4,7 @@
 
 # UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations for Spoken Dialogue Models
 
-[![arXiv](https://img.shields.io/badge/arXiv-Preprint-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX) 
+[![arXiv](https://img.shields.io/badge/arXiv-Preprint-b31b1b.svg)](https://arxiv.org/abs/2510.22588) 
 [![Project Page](https://img.shields.io/badge/Project-Page-green)](https://bigai-nlco.github.io/UltraVoice)
 [![HuggingFace Dataset](https://img.shields.io/badge/🤗%20HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/tutu0604/UltraVoice)
 [![HuggingFace Model](https://img.shields.io/badge/🤗%20HuggingFace-Models-blue)](https://huggingface.co/tutu0604/UltraVoice-SFT)
@@ -115,7 +115,13 @@ This project is licensed under the `MIT License` - see the [LICENSE](LICENSE) fi
 If you find this work useful in your research, please consider citing:
 
 ```bibtex
-
+@article{tu2025ultravoice,
+  title={UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations for Spoken Dialogue Models},
+  author={Tu, Wenming and Yang, Guanrou and Yan, Ruiqi and Chen, Wenxi and Ma, Ziyang and Kang, Yipeng and Yu, Kai and Chen, Xie and Zheng, Zilong},
+  journal={arXiv preprint arXiv:2510.22588},
+  year={2025},
+  url={https://arxiv.org/abs/2510.22588}
+}
 ```
 
 
