@@ -120,7 +120,6 @@ If you find this work useful in your research, please consider citing:
   author={Tu, Wenming and Yang, Guanrou and Yan, Ruiqi and Chen, Wenxi and Ma, Ziyang and Kang, Yipeng and Yu, Kai and Chen, Xie and Zheng, Zilong},
   journal={arXiv preprint arXiv:2510.22588},
   year={2025},
-  url={https://arxiv.org/abs/2510.22588}
 }
 ```
 
